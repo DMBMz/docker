@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Fotos{% endblock %}
+
+{% block content %}
+<style>
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center; 
+    }
+    .foto {
+        width: 200px; /* Defina o tamanho desejado para as fotos */
+        height: auto; 
+    }
+    @media (max-width: 768px) {
+        .foto {
+            width: 150px; /* Reduza o tamanho das fotos para telas menores */
+        }
+    }
+
+    .centro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
+<div class="centro">
+    <h1>Fotos</h1>
+    <div class="grid-container">
+    
+    <img class="foto" src="{{ url_for('static', filename='img/foto (1).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (2).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (3).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (4).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (5).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (6).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (7).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (8).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (9).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (10).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (11).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (12).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (13).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (14).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (15).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (16).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (17).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (18).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (19).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (20).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (21).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (22).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (23).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (24).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (25).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (26).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (27).jpeg') }}" alt="Foto aleatória do Islink">
+    <img class="foto" src="{{ url_for('static', filename='img/foto (28).jpeg') }}" alt="Foto aleatória do Islink">
+</div>
+{% endblock %}

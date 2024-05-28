@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}Quem Somos{% endblock %}
+
+{% block content %}
+<style>
+    .texto {
+        text-align: center;
+    }
+    .texto2 {
+        padding-left: 10px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px; 
+        align-items: start; 
+    }
+    .video {
+        max-width: 80%; 
+        width: 400px; 
+        height: auto; 
+    }
+    @media (max-width: 768px) {
+        .foto {
+            width: calc(33.33% - 20px); /* Define a largura das fotos para ocupar 1/3 do contêiner, com um espaço entre elas */
+        }
+    }
+
+    /* Aplicando estilos para telas menores que 576px */
+    @media (max-width: 576px) {
+        .foto {
+            width: calc(50% - 20px); /* Define a largura das fotos para ocupar metade do contêiner, com um espaço entre elas */
+        }
+    }
+
+</style>
+
+<!--Quem somos-->
+<div class="texto">
+    <br><br><br><br><br>
+    <h1>Islink</h1>
+    <p>O Islink é um cachorro de 4 meses que foi adotado em fevereiro, quando ele tinha em 2 meses, boa parte das nossas fotos são dele pequeniniho, ele é um cão que demorou para se acostumar com a casa, e parece que até agora ele não entendeu que a casa e as coisas que estão nela não são um brinquedo.</p>
+</div>
+
+<!--5 motivos e vídeo-->
+<div class="container">
+    <div class="texto2">
+        <h1>5 caracteristicas</h1>
+        <ul>
+            <li>1. Carente</li>
+            <li>2. Chorão</li>
+            <li>3. Imperativo</li>
+            <li>4. Sempre fominto</li>
+            <li>5. Brincalhão</li>
+        </ul>
+        <hr class="hr2">
+        <h1>Origem        </h1>
+        <p>Vindo de Taubaté, ele é o irmão do meio de uma ninhada de 4 filhotes, onde 3 são machos e 1 única femea, as unicas coias herdadas de seu antigo lar são um pano velho rasgado e laço amarelo.</p>
+        <br>
+        <br>
+        <hr class="hr2">
+        <h1> Bens</h1>
+        <p> Seus itens pessoais são:  </p>
+            <li>Sua cama de balde de frango frito</li>
+            <li>Seu fiel escudeiro urso amarelo</li>
+            <li>Uma corda meio destruida</li>
+            <li>Um cobertor verde</li>
+            <li>Um carneiro rosa</li>
+    </div>
+    
+    <div>
+      
+        <video class="video" controls>
+            <source src="{{ url_for('static', filename='img/pulo.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+<div>
+    
+</div>
+{% endblock %}
